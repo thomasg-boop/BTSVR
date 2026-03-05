@@ -148,8 +148,7 @@
                   animation="dur: 5000; easing: linear; loop: true; property: rotation; to: 359 -90 -90">
     </a-gltf-model>
   </a-entity>
-
-  <!-- BOUTON 3D (légèrement plus petit) -->
+  
   <a-entity id="epicButton"
             geometry="primitive: box; width: 1.05; height: 0.35; depth: 0.18"
             material="color: #E10600"
@@ -192,7 +191,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
 /* BOX SPREAD */
 AFRAME.registerComponent("box-spread", {
   tick() {
-    const speed = 0.02;
+    const speed = 0.2;
     spread += spreading ? speed : -speed;
     spread = Math.min(Math.max(spread, minSpread), maxSpread);
 
